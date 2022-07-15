@@ -47,10 +47,11 @@ class CheckoutCard extends StatelessWidget {
                     color: Color(0xFFF5F6F9),
                     borderRadius: BorderRadius.circular(10),
                   ),
-                  child: SvgPicture.asset("assets/icons/receipt.svg"),
+                  child: SvgPicture.asset("assets/icons/receipt.svg",
+                      color: Color.fromARGB(255, 201, 200, 200)),
                 ),
                 Spacer(),
-                Text("Add voucher code"),
+                Text("Inserisci codice voucher"),
                 const SizedBox(width: 10),
                 Icon(
                   Icons.arrow_forward_ios,
@@ -65,10 +66,10 @@ class CheckoutCard extends StatelessWidget {
               children: [
                 Text.rich(
                   TextSpan(
-                    text: "Total:\n",
+                    text: "Totale:\n",
                     children: [
                       TextSpan(
-                        text: "\$337.15",
+                        text: "337.15 \€",
                         style: TextStyle(fontSize: 16, color: Colors.black),
                       ),
                     ],
@@ -77,7 +78,7 @@ class CheckoutCard extends StatelessWidget {
                 SizedBox(
                   width: getProportionateScreenWidth(190),
                   child: DefaultButton(
-                    text: "Check Out",
+                    text: "Vai al pagamento",
                     press: () {},
                   ),
                 ),

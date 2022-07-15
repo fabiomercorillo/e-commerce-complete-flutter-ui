@@ -7,11 +7,11 @@ class Categories extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     List<Map<String, dynamic>> categories = [
-      {"icon": "assets/icons/Flash Icon.svg", "text": "Flash Deal"},
-      {"icon": "assets/icons/Bill Icon.svg", "text": "Bill"},
-      {"icon": "assets/icons/Game Icon.svg", "text": "Game"},
-      {"icon": "assets/icons/Gift Icon.svg", "text": "Daily Gift"},
-      {"icon": "assets/icons/Discover.svg", "text": "More"},
+      {"icon": "assets/icons/Flash Icon.svg", "text": "Offerta lampo"},
+      {"icon": "assets/icons/Bill Icon.svg", "text": "Scuola"},
+      {"icon": "assets/icons/Game Icon.svg", "text": "Giochi"},
+      {"icon": "assets/icons/Gift Icon.svg", "text": "Regali"},
+      {"icon": "assets/icons/Discover.svg", "text": "Altro"},
     ];
     return Padding(
       padding: EdgeInsets.all(getProportionateScreenWidth(20)),
@@ -55,10 +55,11 @@ class CategoryCard extends StatelessWidget {
               height: getProportionateScreenWidth(55),
               width: getProportionateScreenWidth(55),
               decoration: BoxDecoration(
-                color: Color(0xFFFFECDF),
-                borderRadius: BorderRadius.circular(10),
+                color: Color.fromARGB(255, 255, 161, 161),
+                borderRadius: BorderRadius.circular(100),
               ),
-              child: SvgPicture.asset(icon!),
+              child: SvgPicture.asset(icon!,
+                  color: Color.fromARGB(255, 255, 255, 255)),
             ),
             SizedBox(height: 5),
             Text(text!, textAlign: TextAlign.center)
